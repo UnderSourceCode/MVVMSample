@@ -1,0 +1,67 @@
+﻿@model IEnumerable<MVVMSample.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="ViewList">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th></th>
+    </tr>
+    <tbody data-bind="foreach: employees">
+        <tr>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: City"></td>
+            <td>
+                <a data-bind="attr: { href: EditUrl}">Edit</a>
+                <a data-bind="attr: { href: DetailsUrl}">Details</a>
+                <a data-bind="attr: { href: DeleteUrl}">Delete</a>
+            </td>
+        </tr>    
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    function Employee(data){
+        this.EmployeeID = ko.observable(data.EmployeeID);
+        this.LastName = ko.observable(data.LastName);
+        this.FirstName = ko.observable(data.FirstName);
+        this.City = ko.observable(data.City);
+        this.Name = ko.computed(function() {
+            return this.FirstName() + " " + this.LastName();
+        }, this);
+        this.EditUrl =  ko.computed(function() {
+            return "../employees/Edit/" + this.EmployeeID();
+        }, this);
+        this.DetailsUrl =  ko.computed(function() {
+            return "../employees/Details/" + this.EmployeeID();
+        }, this);
+        this.DeleteUrl =  ko.computed(function() {
+            return "../employees/Delete/" + this.EmployeeID();
+        }, this);
+    }
+
+    $(function () {
+        $.getJSON("@Url.Action("IndexJson")", function (data) {
+            var mappedData = $.map(data, function(item) { return new Employee(item) });
+
+            var viewModel = {
+                employees: ko.observableArray(mappedData)
+            };
+            
+            ko.applyBindings(viewModel);
+        });
+    });
+</script>

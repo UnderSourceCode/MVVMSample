@@ -1,0 +1,16 @@
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\MVVMSample.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\MVVMSample.pdb
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\EntityFramework.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\Microsoft.Web.Infrastructure.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\Microsoft.Web.Optimization.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.Helpers.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.Mvc.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.Providers.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.Razor.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.WebPages.Deployment.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.WebPages.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\System.Web.WebPages.Razor.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\bin\EntityFramework.xml
+D:\ASP.NET MVC\MVVMSample\MVVMSample\obj\Debug\ResolveAssemblyReference.cache
+D:\ASP.NET MVC\MVVMSample\MVVMSample\obj\Debug\MVVMSample.dll
+D:\ASP.NET MVC\MVVMSample\MVVMSample\obj\Debug\MVVMSample.pdb
